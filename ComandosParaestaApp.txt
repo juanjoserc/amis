@@ -1,0 +1,23 @@
+rails new Amis
+cd Amis
+git init
+git add .
+git status
+git commit -m "Initial Amis app repository"
+git log
+
+rails g scaffold Empresa codigo:integer nombre razon_social status:boolean 
+rake db:migrate
+
+modify routes.rb
+root 'empresas#index'
+
+Cree 1 empresa desde el web
+Otra desde command line with create
+
+Added this method to the model
+  def active?
+    status
+  end
+  	
+  	
